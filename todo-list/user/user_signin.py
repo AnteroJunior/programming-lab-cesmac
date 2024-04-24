@@ -2,12 +2,11 @@ from user.user_signup import users_list
 from utils.show_menu import show_logged_menu
 from task.task import *
 
-logged_user = None
-
 def user_login():
 
     email = input('Digite seu e-mail: ')
     password = input('Digite sua senha: ')
+    logged_user = None
 
     for user in users_list:
         if user['email'] == email and user['password'] == password:
