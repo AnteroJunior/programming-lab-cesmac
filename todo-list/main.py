@@ -1,7 +1,6 @@
 from utils.show_menu import show_start_menu
 from user.user_signup import get_informations
-
-tasks_list = []
+from user.user_signin import user_login
 
 def main():
     
@@ -14,7 +13,7 @@ def main():
                     print('Informe as suas credenciais, por favor!\n')
                     get_informations()
                 case 2:
-                  ...
+                    user_login()
                 case 3:
                     print('Sistema encerrando.')
                     break
