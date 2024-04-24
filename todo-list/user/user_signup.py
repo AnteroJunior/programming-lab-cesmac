@@ -11,14 +11,14 @@ def get_informations():
     print('\nÓtimo! Vamos verificar suas credenciais. Um minuto.\n')
 
     create_user(email, password)
-    print(users_list)
 
 def create_user(email, password):
     if validate_email(email) and validate_password(password) and not check_user_exists(email):
         users_list.append({
             'id': uuid.uuid4().hex,
             'email': email,
-            'password': password
+            'password': password,
+            'tasks': []
         })
 
         print('\nUsuário cadastrado com sucesso! Faça login para cadastrar suas tarefas.\n')
